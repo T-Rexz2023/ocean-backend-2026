@@ -27,7 +27,9 @@ app.use(express.json())
 app.post('/personagens', (req, res) => {
   const novoPersonagem = req.body.nome
 
-  res.send(novoPersonagem)
+  lista.push(novoPersonagem)
+
+  res.send("Novo personagem adicionado com sucesso!")
 })
 
 app.listen(3000, () => {
